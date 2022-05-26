@@ -1,0 +1,124 @@
+.box {
+	width: 7.5rem;
+	height: 13.34rem;
+	background: url(../imgs/bg.png) no-repeat center top/7.5rem 4.58rem;
+	margin: 0 auto;
+	position: relative;
+}
+
+.box .title {
+	width: 7.5rem;
+	height: 1.28rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+}
+
+.box .title i {
+	width: .86rem;
+	font-size: .60rem;
+	font-family: PingFangSC;
+	font-weight: 400;
+	color: #333333;
+	line-height: .93rem;
+	padding-left: .26rem;
+	box-sizing: border-box;
+}
+
+.box .title>span {
+	font-size: .34rem;
+	font-family: PingFangSC;
+	font-weight: 400;
+	color: #333333;
+	line-height: .52rem;
+}
+
+.box .title>.empty {
+	width: .86rem;
+}
+
+.box .mat {
+	height: 1.28rem;
+}
+
+.box .content {
+	width: 7.50rem;
+	height: 12.06rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.box .content>.logo {
+	width: 1.96rem;
+	height: 1.96rem;
+	background: #EEEEEE;
+	border: 1px solid #F5F5F5;
+	box-shadow: 0rem .06rem .14rem .04rem rgba(246, 187, 228, 0.15);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 1.54rem;
+	margin-top: .76rem;
+	font-size: .58rem;
+	font-family: SourceHanSansCN;
+	font-weight: 400;
+	color: #C1C1C1;
+}
+
+.box .content>.item {
+	width: 6.57rem;
+	height: .88rem;
+	margin: 0 .46rem .60rem .47rem;
+	border: 1px solid #EEEEEE;
+	border-radius: .44rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+}
+
+.box .content .item>img {
+	margin: .25rem .37rem .27rem .56rem;
+	width: .28rem;
+	height: .36rem;
+}
+
+.box .content .item>input {
+	border: none;
+	outline: none;
+	font-size: .28rem;
+	font-family: SourceHanSansCN;
+	font-weight: 400;
+	color: #999999;
+}
+
+.box .content>h3 {
+	height: .27rem;
+	font-size: .28rem;
+	font-family: SourceHanSansCN;
+	font-weight: 400;
+	color: #666666;
+	margin-bottom: .79rem;
+
+}
+
+.box .content>.btn {
+	width: 6.57rem;
+	height: .88rem;
+	background: #14C678;
+	border-radius: .44rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: .34rem;
+	font-family: SourceHanSansCN;
+	font-weight: 400;
+	color: #FFFFFF;
+}

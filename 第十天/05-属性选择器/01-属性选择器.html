@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 表示有class属性名的元素 */
+			/* div[class] {
+				color: #008B8B;
+			} */
+
+			/* 表示有title属性名的元素 */
+			/* div[title] {
+				color: pink;
+			} */
+
+			/* 表示有class属性名等于box的元素 */
+			/* 	div[class="box"] {
+				color: pink;
+			} */
+
+			/* 表示有class属性名包含box的元素 */
+			/* div[class *="box"] {
+				color: red;
+			} */
+
+			/* 表示有class属性名以box开头的元素 */
+			/* div[class ^="box"] {
+				color: red;
+			} */
+			/* 表示有class属性名以box结束的元素 */
+			/* div[class $="box"] {
+				color: red;
+			} */
+		/* 	表示有class属性名拥有独立box的元素
+			div[class ~="box"] {
+				color: red
+			} */
+		</style>
+	</head>
+	<body>
+		<div class="box">青椒肉丝</div>
+		<div class="boxaaa">尖椒兔</div>
+		<div class="boxbbb">宫保鸡丁</div>
+		<div class="boxaaabbb">回锅肉</div>
+		<div class="aaabbbbox">回锅肉</div>
+		<div class="box aaabbb1">火烧</div>
+		<div title="苦">咖啡</div>
+		<div title="甜">咖啡</div>
+		<div>咖啡</div>
+		<div>咖啡</div>
+	</body>
+</html>

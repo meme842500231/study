@@ -1,0 +1,17 @@
+.big-size {
+  font-size: 40px;
+}
+.btn {
+  width: 701px;
+  height: 88px;
+  background: linear-gradient(91deg, green, blue);
+  border-radius: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  font-family: PingFangSC;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 40px;
+}

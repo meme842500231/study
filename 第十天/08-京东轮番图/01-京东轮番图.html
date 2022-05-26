@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			.box{
+				width: 806px;
+				height: 592px;
+				/* background-color: pink; */
+				margin: 10px auto;
+			}
+			.box .list{
+				height: 507px;
+				background-color: yellow;
+				position: relative;
+			}
+			.box .list li a ,img{
+				height: 507px;
+				width: 806px;
+				display: block;
+			}
+			.box .list li{
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			.box .list li:nth-of-type(1){
+				z-index: 1;
+			}
+			.box .list-bottom li{
+				float: left;
+				margin-right:5PX ;
+			}
+			.box .list-bottom li a img{
+				height: 80px;
+				width: 130px;
+				display: block;
+				
+			}
+			.box .list-bottom{
+				overflow: hidden;
+				margin-top: 5PX;
+			}
+			.box .list-bottom li:last-of-type{
+				margin-right: 0;
+			}
+			.box .list li:target{
+				z-index: 2;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul class="list">
+				<li id="JD01">
+					<a href="##">
+						<img src="./meinv.png" >
+					</a>
+				</li>
+				<li id="JDO2">
+					<a href="##">
+						<img src="./Q自行车.jpg" >
+					</a>
+				</li>
+				<li id="JDO3">
+					<a href="##">
+						<img src="./冰淇淋.jpg" >
+					</a>
+				</li>
+				<li id="jdO4">
+					<a href="##">
+						<img src="./手表.jpg" >
+					</a>
+				</li>
+				<li id="jdO5">
+					<a href="##">
+						<img src="./手机.jpg" >
+					</a>
+				</li>
+				<li id="JDO6">
+					<a href="##">
+						<img src="./羽绒服.jpg" >
+					</a>
+				</li>
+			</ul>
+			<ul class="list-bottom">
+				<li>
+					<a href="#JD01">
+						<img src="./meinv.png" >
+					</a>
+				</li>
+				<li>
+					<a href="#JDO2">
+						<img src="./Q自行车.jpg" >
+					</a>
+				</li>
+				<li>
+					<a href="#JDO3">
+						<img src="./冰淇淋.jpg" >
+					</a>
+				</li>
+				<li>
+					<a href="#jdO4">
+						<img src="./手表.jpg" >
+					</a>
+				</li>
+				<li>
+					<a href="#jdO5">
+						<img src="./手机.jpg" >
+					</a>
+				</li>
+				<li>
+					<a href="#JDO6">
+						<img src="./羽绒服.jpg" >
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

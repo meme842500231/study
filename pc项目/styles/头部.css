@@ -1,0 +1,174 @@
+.box .head .title-box {
+  background: #eaeaea;
+}
+.box .head .title-box .title {
+  width: 1200px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 auto;
+}
+.box .head .title-box .title .mainnav {
+  float: left;
+}
+.box .head .title-box .title .mainnav i {
+  margin: 0 10px;
+  color: #b3aeae;
+}
+.box .head .title-box .title .rightnav {
+  float: right;
+}
+.box .head .title-box .title .rightnav > a {
+  padding: 0 10px;
+}
+.box .head .title-box .title .rightnav > a + a {
+  border-left: 1px solid #b3aeae;
+}
+.box .head .buttom {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.box .head .buttom .logo {
+  float: left;
+}
+.box .head .buttom .logo img {
+  width: 175px;
+  height: 56px;
+  margin: 25px 45px;
+}
+.box .head .buttom .serch {
+  float: right;
+  margin-top: 35px;
+}
+.box .head .buttom .serch > input {
+  width: 490px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0px 4px;
+  box-sizing: border-box;
+  border: 2px solid #ea4a36;
+}
+.box .head .buttom .serch button {
+  width: 68px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  background: #ea4a36;
+  color: #fff;
+}
+.box .shopnav {
+  width: 100%;
+  border-bottom: 2px solid #e1251b;
+  overflow: hidden;
+}
+.box .shopnav .shopnaver {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.box .shopnav .shopnaver h3 {
+  width: 210px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #e1251b;
+  color: #fff;
+  font-size: 14px;
+  float: left;
+}
+.box .shopnav .shopnaver div a {
+  height: 50px;
+  line-height: 50px;
+  margin: 0px 22px;
+  font-size: 16px;
+  color: #333;
+}
+.box .iconnav {
+  width: 100%;
+}
+.box .iconnav .textnav {
+  width: 1200px;
+  margin: 15px auto 0;
+  box-sizing: border-box;
+  padding: 9px 15px 9px 0;
+}
+.box .iconnav .textnav i {
+  color: #ccc;
+  padding: 0 2px;
+  box-sizing: border-box;
+}
+.box .iconnav .shop-content {
+  width: 1200px;
+  margin: 5px auto 15px;
+}
+.box .iconnav .shop-content .wrapimg {
+  width: 400px;
+  position: relative;
+}
+.box .iconnav .shop-content .wrapimg img {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #DFDFDF;
+  position: relative;
+}
+.box .iconnav .shop-content .wrapimg .newbox {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ddd;
+}
+.box .iconnav .shop-content .wrapimg .bigimgbox {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  position: absolute;
+  left: 420px;
+  top: 0;
+}
+.box .iconnav .shop-content .wrapimg .bigimgbox img {
+  width: 800px;
+  height: 800px;
+}
+.box .iconnav .shop-content .imgitem {
+  width: 400px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+.box .iconnav .shop-content .imgitem a {
+  width: 10px;
+  height: 54px;
+  border: 1px solid #CCC;
+  background: #EBEBEB;
+  text-align: center;
+  line-height: 54px;
+  float: left;
+}
+.box .iconnav .shop-content .imgitem a.prev {
+  margin-right: 4px;
+}
+.box .iconnav .shop-content .imgitem .itemwrap {
+  float: left;
+  width: 372px;
+  height: 56px;
+  overflow: hidden;
+  position: relative;
+}
+.box .iconnav .shop-content .imgitem .itemwrap .imgbox {
+  width: 9999px;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  transition: 0.5s;
+}
+.box .iconnav .shop-content .imgitem .itemwrap .imgbox img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #CCC;
+  padding: 2px;
+  margin-right: 20px;
+  float: left;
+}

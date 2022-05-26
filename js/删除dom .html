@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			window.onload = function() {
+				document.getElementById('btn01').onclick = function() {
+					// let list = document.getElementById('list')
+					let bgj = document.getElementById('bgj')
+					// list.removeChild(bgj)
+					// bgj.parentNode.removeChild(bgj)
+					bgj.remove(bgj)
+				}
+				document.getElementById('btn02').onclick = function() {
+
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn01">按钮1</button>
+		<button id="btn02">按钮2</button>
+		<ul id="list">
+			<li>蜘蛛精</li>
+			<li id="bgj">白骨精</li>
+			<li>沙和尚</li>
+			<li>孙悟空</li>
+		</ul>
+	</body>
+</html>

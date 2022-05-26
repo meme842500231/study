@@ -1,0 +1,30 @@
+{
+  "id": "3317831",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "27435270",
+      "name": "03男性角色",
+      "font_class": "a-03nanxingjiaose",
+      "unicode": "ee80",
+      "unicode_decimal": 61056
+    },
+    {
+      "icon_id": "27435272",
+      "name": "05女性角色",
+      "font_class": "a-05nvxingjiaose",
+      "unicode": "ee82",
+      "unicode_decimal": 61058
+    },
+    {
+      "icon_id": "27435275",
+      "name": "08男性角色",
+      "font_class": "a-08nanxingjiaose",
+      "unicode": "ee85",
+      "unicode_decimal": 61061
+    }
+  ]
+}

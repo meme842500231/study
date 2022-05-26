@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.box {
+				width: 500px;
+				background: pink;
+				margin: 100px auto;
+				text-align: center;
+			}
+		</style>
+		<script>
+			window.onload = function() {
+				let up = document.getElementById('up')
+				let down = document.getElementById('down')
+				let img  = document.getElementsByTagName('img')[0]
+				console.log(img)
+				let imgPath = ['./imgs/1.jpg', './imgs/2.jpg', './imgs/3.jpg', './imgs/4.jpg', './imgs/5.jpg']
+				let index = 0;
+				up.onclick = function() {
+					index--;
+					if (index < 0) {
+						index = imgPath.length - 1;
+					}
+					img.src = imgPath[index];
+					info.innerHTML="当前第"+(index+1)+"张,共"+imgPath.length+"张";
+				};
+				down.onclick = function() {
+					index++;
+					if (index > imgPath.length - 1) {
+						index = 0;
+					}
+					img.src = imgPath[index];
+					info.innerHTML="当前第"+(index+1)+"张,共"+imgPath.length+"张";
+				};
+			};
+		</script>
+	</head>
+	<body>
+		<div class="box">
+			<p id="info">当前第1张，共5张</p>
+			<img src="./imgs/1.jpg" alt="图片">
+			<button id="up">上一张</button>
+			<button id="down">下一张</button>
+		</div>
+
+	</body>
+</html>

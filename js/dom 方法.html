@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			window.onload = function() {
+				let div = document.querySelector('div[title]');
+				console.log(div);
+				div.innerHTML = '我的div';
+				let items = document.querySelectorAll('.item');
+				console.log(items);
+				for (let i=0; i<items.length; i++) {
+					items[i].innerHTML = '12313'
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div title="我还是第一个">我是div</div>
+		<div>我还是第一个</div>
+		<div class="item">选项一</div>
+		<div class="item">选项二</div>
+		<div class="item">选项三</div>
+		<div class="item">选项四</div>
+		<div class="item">选项五</div>
+	</body>
+</html>

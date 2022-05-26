@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				margin: 5px auto 0;
+				/* 圆角单属性 */
+				/* 可以是像素值，也可以是百分比，宽和高的百分比 */
+				/* 两个值得时候是  水平  垂直 */
+				border-top-left-radius: 50% 25%;
+				/* 左上 */
+				/* 一个值是水平和垂直 */
+				border-top-right-radius: 100px;
+				border-bottom-left-radius: 100px;
+				border-bottom-right-radius: 100px;
+				/* 圆角复合属性 */
+				/* 一个值是    左上右上右下左下 */
+				border-radius: 100px;
+				/* 两个值是    左上右下 右上左下 */
+				border-radius: 100px 20px;
+				/* 三个值是    左上  右上左下   右下 */
+				border-radius: 50px 30px 20px;
+				/* 四个值是       左上  右上 左下   右下 */
+				border-radius: 50px 30px 40px 20px;
+			}
+			div:nth-of-type(4){
+				width: 200px;
+				height: 100px;
+				border-radius: 100px 100px 0 0;
+			}
+			div:nth-of-type(5){
+				border-radius: 200px 0 0 0;
+			}
+			div:nth-of-type(6){
+				width: 200px;
+				height: 100px;
+				          /* 水平  垂直 */	
+				border-radius:100px/50px;
+				            /* 水平水平水平水平 垂直垂直垂直垂直 */
+				border-radius: 50px 0 0 0/100px 0 0 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box {
+				width: 100px;
+				height: 100px;
+				background-color: aqua;
+				position: absolute;
+			}
+			#box1{
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body> 
+		<div id="box"></div>
+		<img id="box1" src="../flex练习/产品商城 - 副本/img/O1CN01rHkjQp2FXfkvBbpi7_!!0-item_pic.jpg_400x400q90.jpg_.webp" alt="图片">
+		<script>
+			let box = document.getElementById('box')
+			let box1 = document.getElementById('box1')
+			box.onmousedown = function(event) {
+				let left = event.clientX - box.offsetLeft
+				let top = event.clientY - box.offsetTop
+				document.onmousemove = function(event) {
+					event.preventDefault()
+					box.style.left = event.clientX - left + 'px'
+					box.style.top = event.clientY - top + 'px'
+				}
+				document.onmouseup = function() {
+					document.onmousemove = null
+					document.onmouseup = null
+				}
+			}
+			box1.onmousedown = function(event) {
+				let left = event.clientX - box1.offsetLeft
+				let top = event.clientY - box1.offsetTop
+				document.onmousemove = function(event) {
+					event.preventDefault()
+					box1.style.left = event.clientX - left + 'px'
+					box1.style.top = event.clientY - top + 'px'
+				}
+				document.onmouseup = function() {
+					document.onmousemove = null
+					document.onmouseup = null
+				}
+			}
+		
+		</script>
+	</body>
+</html>

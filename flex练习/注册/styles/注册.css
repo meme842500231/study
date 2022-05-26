@@ -1,0 +1,156 @@
+.box {
+	width: 7.5rem;
+	height: 13.34rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	position: relative;
+}
+
+.box .title {
+	background: #FFFFFF;
+	position: fixed;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+
+}
+
+.box .title .head {
+	width: 7.5rem;
+	height: 1.31rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.box .title .head>span {
+	width: 1.34rem;
+	/* height: .33rem; */
+	font-size: .60rem;
+	font-family: PingFangSC;
+	font-weight: 400;
+	color: #333333;
+	padding-left: .24rem;
+	box-sizing: border-box;
+}
+
+.box .title .head>h3 {
+	font-size: .34rem;
+	font-family: PingFang;
+	font-weight: bold;
+	color: #333333;
+}
+
+.box .title .head>.empty {
+	width: 1.34rem;
+	height: .33rem;
+}
+
+.box .mat {
+	height: 1.31rem;
+}
+
+.box .body {
+	width: 7.50rem;
+	height: 12.06rem;
+	background: #FAFAFA;
+	padding: .24rem .25rem;
+	box-sizing: border-box;
+}
+
+.box .body .item {
+	width: 7.01rem;
+	/* height: 5.49rem; */
+	background: #FFFFFF;
+	border: 1px solid #E1DDDD;
+	border-radius: .16rem;
+}
+
+.box .body .item .description {
+	width: 100%;
+	height: 1.12rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	border-top: 1px solid #E5E5E5;
+	border-bottom: 1px solid #E5E5E5;
+}
+
+.box .body .item .description>img,
+.box .body .item .description>p {
+	width: .27rem;
+	height: .38rem;
+	padding-left: .48rem;
+}
+
+.box .body .item .description>input {
+	width: 100%;
+	height: 1.12rem;
+	font-size: .28rem;
+	font-family: SourceHanSansCN;
+	font-weight: 400;
+	color: #999999;
+	outline: none;
+	border: none;
+	padding-left: .49rem;
+}
+
+.box .body .item .description>span {
+	width: 2.90rem;
+	height: .68rem;
+	background: linear-gradient(91deg, #56E7A7, #02BF6F);
+	border-radius: .34rem;
+	font-size: .22rem;
+	font-family: SourceHanSansCN;
+	font-weight: 400;
+	color: #FFFFFF;
+	line-height: .68rem;
+	text-align: center;
+	margin-right: .25rem;
+}
+
+.box .body .footer {
+	width: 7.01rem;
+	/* height: .36rem; */
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin-top: .27rem;
+	margin-bottom: .80rem;
+
+}
+
+.box .body .footer>img {
+	width: .36rem;
+	height: .36rem;
+}
+
+.box .body .footer>p {
+	font-size: .28rem;
+	font-family: PingFang;
+	font-weight: bold;
+	color: #666666;
+	margin-left: .27rem;
+}
+
+.box .body .footer h1 {
+	font-size: .28rem;
+	font-family: PingFang;
+	font-weight: bold;
+	color: #02BF6F;
+}
+.box .body .footerbtn{
+	width: 7.01rem;
+	height: .88rem;
+	background: linear-gradient(91deg, #56E7A7, #02BF6F);
+	border-radius: .44rem;
+	font-size: .34rem;
+	font-family: SourceHanSansCN;
+	font-weight: 400;
+	color: #FFFFFF;
+	line-height:.88rem;
+	text-align: center;
+}

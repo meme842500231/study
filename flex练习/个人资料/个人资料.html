@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="styles/reset.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="styles/资料.css" /> -->
+		<link rel="stylesheet" type="text/css" href="styles/资料1.css"/>
+		<script src="scrips/rem.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="title">背景<sdqevbVBDAB></sdqevbVBDAB></div>
+		<!-- <div class="btn">银行卡绑定</div> -->
+		<div class="mask ac">
+			<div class="content">
+				<div class="head">
+					银行卡绑定
+				</div>
+				<div class="body">
+					<div class="description">
+						<h1>银行名称</h1>
+						<input type="text" placeholder="请输入您的银行名称" value="某某银行" />
+					</div>
+					<div class="description">
+						<h1>支行名称</h1>
+						<input type="text" placeholder="请输入支行名称" value="什么支行"/>
+					</div>
+					<div class="description">
+						<h1>姓名</h1>
+						<input type="text" placeholder="请输入您的姓名" value="嘎嘎" />
+					</div>
+					<div class="description">
+						<h1>银行卡账号</h1>
+						<input type="text" placeholder="请输入您的银行卡账号" value="123456778901234" />
+					</div>
+				</div>
+				<div class="footerbar">
+					<span id="cancel">取消</span>
+					<span id="confirm">确认绑定</span>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		const btn = document.getElementsByClassName('btn')[0]
+		const mask = document.getElementsByClassName('mask')[0]
+		const content = document.getElementsByClassName('content')[0]
+		const cancel = document.getElementById('cancel')
+		const confirm = document.getElementById('confirm')
+		btn.onclick = function() {
+			mask.classList.add('ac')
+		}
+		mask.onclick = function() {
+			mask.classList.remove('ac')
+		}
+		content.onclick = function(e) {
+			e.stopPropagation()
+		}
+		cancel.onclick = function() {
+			mask.classList.remove('ac')
+		}
+		confirm.onclick = function() {
+			mask.classList.remove('ac')
+		}
+	</script>
+</html>

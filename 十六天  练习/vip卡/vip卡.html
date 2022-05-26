@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			.vip {
+				width: 750px;
+				height: 1334px;
+				margin: 100px auto;
+				background: #FFFFFF url(img/bg.png) no-repeat center top/750px 360px;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+				padding-top: 405px;
+				box-sizing: border-box;
+				border: 1px solid pink;
+			}
+
+			.vip .item {
+				width: 701px;
+				height: 222px;
+				background: #DDFAED;
+				border: 1px solid #F5F5F5;
+				box-shadow: 0px 7px 11px 1px rgba(2, 191, 111, 0.3);
+				border-radius: 16px;
+				margin: 35px 24px 0 25px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				/* box-sizing: border-box; */
+			}
+
+			.vip .item:nth-of-type(1) {
+				margin-top: 0px;
+			}
+
+			.vip .item .left {
+				display: flex;
+				align-items: center;
+			}
+
+			.vip .item .left>img {
+				width: 80px;
+				height: 80px;
+				margin: 0 31px 0 41px;
+			}
+			
+			.vip .item .left>span {
+				font-size: 32px;
+				font-family: PingFang;
+				font-weight: bold;
+				color: #333333;
+
+			}
+
+			.vip .item>img {
+				width: 65px;
+				height: 65px;
+				margin-right: 34px;
+			}
+
+			.vip .footer {
+				width: 750px;
+				height: 98px;
+				background: #FFFFFF;
+				border: 1px solid #F5F5F5;
+				box-shadow: 0px 6px 14px 4px rgba(132, 132, 132, 0.15);
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				margin-top: 100px;
+			}
+
+			.vip .footer .imgfooter {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.vip .footer .imgfooter>img {
+				width: 56px;
+				height: 52px;
+				margin: 2px 0 5px 0;
+			}
+
+			.vip .footer .imgfooter:nth-of-type(2)>img {
+				width: 45px;
+				height: 45px;
+			}
+
+			.vip .footer .imgfooter:nth-of-type(3)>img {
+				width: 50px;
+				height: 45px;
+			}
+
+			.vip .footer .imgfooter:nth-of-type(4)>img {
+				width: 39px;
+				height: 45px;
+			}
+
+			.vip .footer.imgfooter>span {
+				font-size: 20px;
+				font-family: PingFang;
+				font-weight: 500;
+				color: #626262;
+				line-height: 32px;
+			}
+
+			.vip .footer .imgfooter:nth-of-type(1)>span {
+				font-size: 20px;
+				font-family: PingFang;
+				font-weight: 500;
+				color: #02BF6F;
+				line-height: 32px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="vip">
+			<div class="item">
+				<div class="left">
+					<img src="./img/price.png">
+					<span>198套餐</span>
+				</div>
+				<img src="img/right-arrow.png">
+			</div>
+			<div class="item">
+				<div class="left">
+					<img src="./img/price.png">
+					<span>198套餐</span>
+				</div>
+				<img src="img/right-arrow.png">
+			</div>
+			<div class="item">
+				<div class="left">
+					<img src="./img/price.png">
+					<span>198套餐</span>
+				</div>
+				<img src="img/right-arrow.png">
+			</div>
+			<div class="footer">
+				<div class="imgfooter">
+					<img src="./img/home.png">
+					<span>首页</span>
+				</div>
+				<div class="imgfooter">
+					<img src="./img/shop.png">
+					<span>商城</span>
+				</div>
+				<div class="imgfooter">
+					<img src="./img/camera.png">
+					<span>防疫专场</span>
+				</div>
+				<div class="imgfooter">
+					<img src="./img/user.png">
+					<span>个人中心</span>
+				</div>
+			</div>
+	</body>
+</html>

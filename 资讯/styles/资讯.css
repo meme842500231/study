@@ -1,0 +1,240 @@
+.box {
+	width: 7.50rem;
+	height: 13.34rem;
+	position: relative;
+
+}
+
+.box .title {
+	width: 7.5rem;
+	height: 1.29rem;
+	background: #FFFFFF;
+	box-shadow: 0px 2px 9px 0px rgba(86, 231, 167, 0.1);
+	text-align: center;
+	/* display: flex;
+	justify-content: center;
+	align-items: flex-start; */
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+.box .empty {
+	height: 1.29rem;
+}
+
+.box .title>span {
+	width: 1.32rem;
+	height: .33rem;
+	font-size: .34rem;
+	font-family: PingFang;
+	font-weight: bold;
+	color: #333333;
+	line-height: .52rem;
+}
+
+.box .body {
+	background: #FAFAFA;
+	margin: 0 .24rem;
+}
+
+.box .body .nack {
+	width: 7.01rem;
+	/* height: 4.63rem; */
+	margin: .20rem 0 .26rem 0;
+	background: #FFFFFF;
+	box-shadow: 0px 7px 10px 1px rgba(86, 231, 167, 0.1);
+	border-radius: .16rem;
+	padding: .30rem .24rem;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+}
+
+.box .body .nack>h2 {
+	font-size: .32rem;
+	font-family: SourceHanSansCN;
+	font-weight: 400;
+	color: #303030;
+}
+
+.box .body .nack>p {
+	font-size: .24rem;
+	font-family: SourceHanSansCN;
+	font-weight: 400;
+	color: #8F8F93;
+	margin: .15rem .44rem .15rem 0;
+}
+
+.box .body .nack>img {
+	width: 6.53rem;
+	height: 2.44rem;
+	background: #B5B5B5;
+	border-radius: .17rem;
+}
+
+.box .body .nack .bottombar {
+	margin-top: .25rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.box .body .nack .bottombar>p:nth-of-type(1) {
+	width: .85rem;
+	height: .36rem;
+	border: 1px solid #02BF6F;
+	border-radius: .18rem;
+	font-size: .22rem;
+	font-family: SourceHanSansCN;
+	font-weight: 400;
+	color: #02BF6F;
+	text-align: center;
+}
+
+.box .body .nack .bottombar>p:nth-of-type(2) {
+	font-size: .22rem;
+	font-family: SourceHanSansCN;
+	font-weight: 400;
+	color: #C1C1C1;
+	margin-left: .23rem;
+}
+
+.box .body .nack .bottombar>img {
+	width: .25rem;
+	height: .14rem;
+	margin: 0 .01rem 0 .24rem;
+}
+
+.box .body .nack .bottombar>p:nth-of-type(3) {
+	font-size: .22rem;
+	font-family: SourceHanSansCN;
+	font-weight: 400;
+	color: #C1C1C1;
+}
+
+.box .body .item {
+	width: 7.01rem;
+	height: 2.46rem;
+	box-shadow: 0px 7px 10px 1px rgba(86, 231, 167, 0.1);
+	border-radius: .16rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding:.32rem .25rem;
+	box-sizing: border-box;
+
+}
+
+.box .body .item>img {
+	width: 2.12rem;
+	height: 1.81rem;
+	border-radius: .06rem;
+}
+
+.box .body .item .content {
+	margin-left: .24rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	
+}
+
+.box .body .item .content>h2 {
+	font-size: .32rem;
+	font-family: SourceHanSansCN;
+	font-weight: 400;
+	color: #303030;
+}
+.box .body .item .content>p {
+	font-size: .24rem;
+	font-family: SourceHanSansCN;
+	font-weight: 400;
+	color: #8F8F93;
+	margin: .05rem .10rem .05rem 0;
+}
+
+.box .body .item .content .decription {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.box .body .item .content .decription>p:nth-of-type(1) {
+	font-size: .28rem;
+	font-family: SourceHanSansCN;
+	font-weight: 400;
+	color: #C1C1C1;
+	
+}
+
+.box .body .item .content .decription>p:nth-of-type(2) {
+	font-size: .22rem;
+	font-family: SourceHanSansCN;
+	font-weight: 400;
+	color: #C1C1C1;
+}
+
+.box .body .item .content .decription>img {
+	width: .25rem;
+	height: .14rem;
+	margin: 0 .01rem 0 .36rem;
+}
+
+.box .footer {
+	width: 7.50rem;
+	height: .98rem;
+	background: #FFFFFF;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background: #FFFFFF;
+	border: 1px solid #F5F5F5;
+	box-shadow: 0px 6px 14px 4px rgba(132, 132, 132, 0.15);
+
+}
+
+.box .footer>.menu {
+	width: 7.5rem;
+	height: .98rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.box .footer>.menu>p {
+	font-size: .20rem;
+	font-family: PingFang;
+	font-weight: 500;
+	color: #626262;
+	margin: .06rem 0;
+}
+
+.box .footer>.menu>img:nth-of-type(1) {
+	width: .5rem;
+	height: .48rem;
+}
+
+.box .footer>.menu img:nth-of-type(2) {
+	width: .45rem;
+	height: .45rem;
+}
+
+.box .footer>.menu img:nth-of-type(3) {
+	width: .56rem;
+	height: .51rem;
+}
+
+.box .footer>.menu img:nth-of-type(4) {
+	width: .39rem;
+	height: .45rem;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/头部.css">
+    <link rel="stylesheet" href="./scripts/rem.js">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="head">
+            <div class="title-box">
+                <div class="title">
+                    <div class="mainnav">尚品汇欢迎您！ 请
+                        <span>
+                            <i>|</i>
+                            <a href="##">登录</a>
+                            <i>|</i>
+                            <a href="##">注册</a>
+                        </span>
+                    </div>
+                    <div class="rightnav">
+                        <a href="##">我的订单</a>
+                        <a href="##">我的购物车</a>
+                        <a href="##">我的尚品汇</a>
+                        <a href="##">尚品汇会员</a>
+                        <a href="##">企业采购</a>
+                        <a href="##">关注尚品汇</a>
+                        <a href="##">合作招商</a>
+                        <a href="##">商家后台</a>
+                    </div>
+                </div>
+            </div>
+            <div class="buttom">
+                <h1 class="logo">
+                    <a href="##"><img src="./imgs/Logo.png" alt="图片"></a>
+                </h1>
+                <div class="serch">
+                    <input type="text">
+                    <button>搜索</button>
+                </div>
+            </div>
+        </div>
+        <div class="shopnav">
+            <div class="shopnaver">
+                <h3>全部商品分类</h3>
+                <div><a href="##">服装城</a>
+                    <a href="##">美妆馆</a>
+                    <a href="##">尚品汇超市</a>
+                    <a href="##">全球购</a>
+                    <a href="##">团购</a>
+                    <a href="##">闪购</a>
+                    <a href="##">有趣</a>
+                    <a href="##">秒杀</a>
+                </div>
+            </div>
+        </div>
+        <div class="iconnav">
+            <div class="textnav">
+                <!-- <a href="https://www.baidu.com">手机、数码、通讯录</a>
+                <i>/</i>
+                <a href="https://weibo.com">手机</a>
+                <i>/</i>
+                <a href="https://www.zhihu.com">Apple苹果</a>
+                <i>/</i>
+                <a>iPhone 6S系类</a> -->
+            </div>
+            <div class="shop-content">
+                <div class="wrapimg">
+                    <!-- <img src="./imgs/b1.png"> -->
+                </div>
+                <div class="imgitem">
+                    <a href="javascript:;" class="prev">&lt;</a>
+                    <div class="itemwrap">
+                        <div class="imgbox">
+                            <!-- <img src="./imgs/b3.png">
+                            <img src="./imgs/b2.png">
+                            <img src="./imgs/b3.png">
+                            <img src="./imgs/b1.png">
+                            <img src="./imgs/b1.png">
+                            <img src="./imgs/b2.png">
+                            <img src="./imgs/b3.png">
+                            <img src="./imgs/b1.png">
+                            <img src="./imgs/b1.png">
+                            <img src="./imgs/b2.png"> -->
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="next">&gt;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./scripts/deta.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+        conPoin()
+        function conPoin() {
+            let path = goodDate.path
+            let textnav = document.querySelector('.box .iconnav .textnav')
+
+            for (let i = 0; i < path.length; i++) {
+                let aNode = document.createElement('a')
+                if (i == path.length - 1) {
+                    aNode.innerHTML = path[i].title
+                    textnav.appendChild(aNode)
+                } else {
+                    aNode.innerHTML = path[i].title
+                    aNode.href = path[i].url
+                    textnav.appendChild(aNode)
+                    let iNode = document.createElement('i')
+                    iNode.innerHTML = '/'
+                    textnav.appendChild(iNode)
+                }
+            }
+        }
+        shopContent()
+        function shopContent() {
+            let wrapimg = document.querySelector('.box .iconnav .shop-content .wrapimg')
+            let itemwrap = document.querySelector('.box .iconnav .shop-content .imgitem')
+            let zoom = null
+            let bigimg = null
+            let bigimgbox = null
+            let imagessrc = goodDate.imagessrc
+            let smalImg = document.createElement('img')
+            smalImg.src = imagessrc[0].s
+            wrapimg.appendChild(smalImg)
+            wrapimg.onmouseenter = function () {
+                if (!zoom) {
+                    zoom = document.createElement('div')
+                    zoom.className = 'newbox'
+                    wrapimg.appendChild(zoom)
+                    bigimgbox = document.createElement('div')
+                    bigimgbox.className = 'bigimgbox'
+                    wrapimg.appendChild(bigimgbox)
+                    bigimg = document.createElement('img')
+                    // bigimg=new Image()
+                    bigimg.src = "./imgs/b1.png"
+                    bigimgbox.appendChild(bigimg)
+                }
+                wrapimg.onmousemove = function (event) {
+                    event = event || window.event
+                    let zoomPosition = {
+                        left: event.clientX - wrapimg.getBoundingClientRect().left - zoom.offsetWidth / 2,
+                        top: event.clientY - wrapimg.getBoundingClientRect().top - zoom.offsetHeight / 2
+                    }
+                    if (zoomPosition.left < 0) {
+                        zoomPosition.left = 0
+                    } else if (zoomPosition.left > wrapimg.clientWidth - zoom.offsetWidth) {
+                        zoomPosition.left = wrapimg.clientWidth - zoom.offsetWidth
+                    }
+                    if (zoomPosition.top < 0) {
+                        zoomPosition.top = 0
+                    } else if (zoomPosition.top > wrapimg.clientWidth - zoom.offsetHeight) {
+                        zoomPosition.top = wrapimg.clientWidth - zoom.offsetHeight
+                    }
+                    zoom.style.left = zoomPosition.left + 'px'
+                    zoom.style.top = zoomPosition.top + 'px'
+                    let scale = (wrapimg.clientWidth - zoom.offsetWidth) / (bigimg.offsetWidth - bigimgbox.clientWidth)
+                    let bigimgposition = {
+                        left: zoomPosition.left / scale,
+                        top: zoomPosition.top / scale
+                    }
+                    bigimg.style.left = -bigimgposition.left + 'px'
+                    bigimg.style.top = -bigimgposition.top + 'px'
+                }
+                wrapimg.onmouseleave = function () {
+                    wrapimg.removeChild(zoom)
+                    wrapimg.removeChild(bigimgbox)
+                    zoom = null
+                    bigimg = null
+                    bigimgbox = null
+                    wrapimg.onmousemove = null
+                    wrapimg.onmouseleave = null
+                }
+ 
+
+            }
+        }
+        imgitem()
+        function imgitem() {
+            let prevNode = document.querySelector('.box .iconnav .shop-content .imgitem a.prev')
+            let nextNode = document.querySelector('.box .iconnav .shop-content .imgitem a.next')
+            // let itemwrap = document.querySelector('.box .iconnav .shop-content .imgitem .itemwrap ')
+            let imgbox = document.querySelector('.box .iconnav .shop-content .imgitem .itemwrap .imgbox')
+            let imagessrc = goodDate.imagessrc
+            imagessrc.forEach(function (item) {
+                let liNode = document.createElement('li')
+                let imgNode = document.createElement('img')
+                imgNode.src = item.s
+                liNode.appendChild(imgNode)
+                imgbox.appendChild(liNode)
+            });
+            let itemImg = document.querySelectorAll('.box .iconnav .shop-content .imgitem .itemwrap .imgbox img')
+            let moveMum = 2
+            let showImg = 5
+            let moveLeft = (itemImg[0].offsetWidth + 20) * moveMum
+            // console.log( moveLeft)
+            let countLeft = (itemImg.length - showImg) * (itemImg[0].offsetWidth + 20)
+            let tempLeft = 0
+            nextNode.onclick = function () {
+                if (tempLeft < countLeft) {
+                    if (countLeft - tempLeft > moveLeft) {
+                        tempLeft += moveLeft
+                    } else {
+                        tempLeft += countLeft
+                    }
+
+                    imgbox.style.left = -tempLeft + 'px'
+                }
+            }
+            prevNode.onclick = function () {
+                if (tempLeft > 0) {
+                    if (tempLeft > moveLeft) {
+                        tempLeft -= moveLeft
+                    } else {
+                        tempLeft = 0
+                    }
+
+                    imgbox.style.left = -tempLeft + 'px'
+                }
+            }
+        }
+        itemwrapClick()
+        function itemwrapClick() {
+            let imgbox = document.querySelectorAll('.box .iconnav .shop-content .imgitem .itemwrap .imgbox')
+            let imagessrc = goodDate.imagessrc
+            let smalImg = document.querySelector('.box .iconnav .shop-content .wrapimg img')
+            for (let i = 0; i < imgbox.length; i++) {
+                imgbox[i].index = i
+                imgbox[i].onclick = function () {
+                    let imgsrc = imagessrc[this.index].s
+                    smalImg.src = imgsrc
+                }
+            }
+        }
+    }
+
+</script>
+
+</html>

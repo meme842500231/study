@@ -1,0 +1,243 @@
+.box {
+	width: 7.5rem;
+	height: 13.34rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	position: relative;
+}
+
+.box .title {
+	background: #FFFFFF;
+position: fixed;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+
+}
+
+.box .title .head {
+	width: 7.5rem;
+	height: 1.31rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+
+.box .title .head>span {
+	width: 1.34rem;
+	/* height: .33rem; */
+	font-size: .60rem;
+	font-family: PingFangSC;
+	font-weight: 400;
+	color: #333333;
+	padding-left: .24rem;
+	box-sizing: border-box;
+}
+
+.box .title .head>h3 {
+	font-size: .34rem;
+	font-family: PingFang;
+	font-weight: bold;
+	color: #333333;
+}
+
+.box .title .head>.empty {
+	width: 1.34rem;
+	height: .33rem;
+}
+
+.box .title .neck {
+	width: 7.5rem;
+	height: .9rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.box .title .neck>span:nth-of-type(1) {
+	width: 1.4rem;
+	height: .5rem;
+	background: #02BF6F;
+	border-radius: .08rem;
+	font-size: .28rem;
+	font-family: PingFang;
+	font-weight: 400;
+	color: #FFFFFF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box .title .neck>span:nth-of-type(2) {
+
+	background: #FFFFFF;
+	font-size: .28rem;
+	font-family: PingFang;
+	font-weight: 400;
+	color: #333333;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box .mat { 
+	height: 2.21rem;
+}
+
+.box .body {
+	width: 100%;
+	height: 11.12rem;
+	background: #F7F8FA;
+	display: flex;
+	flex-direction: column;
+
+	justify-content: flex-start;
+	align-items: flex-start;
+	/* padding-top: .12rem; */
+	box-sizing: border-box;
+}
+
+.box .body .item {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	padding: .12rem .24rem;
+	box-sizing: border-box;
+}
+
+.box .body .item>div {
+	width: 3.38rem;
+	height: 4.16rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	background: #FFFFFF;
+	box-shadow: 0px 7px 10px 1px rgba(86, 231, 167, 0.1);
+	border-radius: 16px;
+
+}
+
+.box .body .item>div:nth-of-type(odd) {
+	margin-right: .24rem;
+}
+
+.box .body .item>div {
+	margin-top: .24rem;
+}
+
+.box .body .item div>img {
+	width: 3.38rem;
+	height: 2.69rem;
+}
+
+.box .body .item .xiaotitle {
+	width: 100%;
+	font-size: .26rem;
+	font-family: PingFangSC;
+	font-weight: 400;
+	color: #424242;
+	padding: .18rem .24rem .30rem .24rem;
+	box-sizing: border-box;
+}
+
+.box .body .item .description {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 .24rem;
+	box-sizing: border-box;
+
+}
+
+.box .body .item .description>h1:nth-of-type(1) {
+	font-size: .32rem;
+	font-family: PingFang;
+	font-weight: bold;
+	color: #FE4545;
+	/* margin: 0 .85rem .31rem .45rem; */
+}
+
+.box .body .item .description>h1:nth-of-type(2) {
+	font-size: .22rem;
+	font-family: PingFangSC;
+	font-weight: 400;
+	color: #C1C1C1;
+	/* margin: 0 .47rem .30rem 0; */
+}
+
+.box .footer {
+	width: 7.5rem;
+	height: .98rem;
+	background: #FFFFFF;
+	border: 1px solid #F5F5F5;
+	box-shadow: 0 .06rem .14rem .04rem rgba(132, 132, 132, 0.15);
+	margin-top: 1.22rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: fixed;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+}
+
+.box .footer .imgfooter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.box .footer .imgfooter>img {
+	width: .50rem;
+	height: .48rem;
+	margin: .02rem 0 .05rem 0;
+
+}
+
+.box .footer .imgfooter:nth-of-type(1)>img {
+	color: #A3A3A3;
+	background: #FFFFFF;
+	border: 1px solid #F5F5F5;
+	box-shadow: 0 .06rem .14rem .04rem rgba(132, 132, 132, 0.15);
+}
+
+.box .footer .imgfooter:nth-of-type(2)>img {
+	width: .49rem;
+	height: .49rem;
+	background: #FFFFFF;
+	border: 1px solid #F5F5F5;
+	box-shadow: 0 .06rem .14rem .04rem rgba(132, 132, 132, 0.15);
+}
+
+.box .footer .imgfooter:nth-of-type(3)>img {
+	width: .50rem;
+	height: .45rem;
+}
+
+.box .footer .imgfooter:nth-of-type(4)>img {
+	width: .39rem;
+	height: .45rem;
+}
+
+.box .footer .imgfooter>span {
+	font-size: .20rem;
+	font-family: PingFang;
+	font-weight: 500;
+	color: #626262;
+	line-height: .32rem;
+}
+
+.box .footer .imgfooter:nth-of-type(2)>span {
+	font-size: .20rem;
+	font-family: PingFang;
+	font-weight: 500;
+	color: #02BF6F;
+	line-height: .32rem;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			.box {
+				position: fixed;
+				right: 0;
+				top: 50%;
+				transform: translate(0, -50%);
+
+			}
+
+			.box ul li {
+				height: 40px;
+				width: 40px;
+				background-color: #008B8B;
+				margin-bottom: 10px;
+				position: relative;
+				font-size: 14px;
+				color: #fff;
+				
+			}
+
+			body {
+				height: 3000px;
+				width: 1000px;
+			}
+
+			.box ul li span {
+				width: 72px;
+				height: 40px;
+				line-height: 40px;
+				background: #333;
+				position: absolute;
+				left: 0;
+				top: 0;
+				border-radius: 5px 0 0 5px;
+				padding-left: 15px;
+				transition: left 1.5s;
+			}
+
+			.box ul li i {
+				height: 40px;
+				width: 40px;
+				background: #333 url(img/i1.png)no-repeat center center;
+				position: absolute;
+				left: 0;
+				top: 0;
+				border-radius: 5px 0 0 5px;
+			}
+			.box ul li:nth-of-type(2) i{
+			background: #333 url(img/i2.png) no-repeat center center;
+			}
+			.box ul li:nth-of-type(3) i{
+			background: #333 url(img/i3.png)no-repeat center center;
+			}
+			.box ul li:hover i{
+				background-color: darkred;
+				transition: all 1.5s;
+			
+				
+			}
+			.box ul li:hover span{
+				background-color: darkred;
+				left:-80px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<li><span>购物车</span>
+					<i></i>
+				</li>
+				<li><span>购物车</span>
+					<i></i>
+				</li>
+				<li><span>购物车</span>
+					<i></i>
+				</li>
+			</ul>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.box {
+			width: 340px;
+			height: 400px;
+			background: #b7d4ab;
+			border: 10px solid #000;
+			border-radius: 10%;
+			margin: 200px auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+		.box>.stage {
+			width: 300px;
+			height: 300px;
+			border: 2px solid #000;
+			position: relative;
+		}
+
+		.box>.stage>.snake>div {
+			box-sizing: border-box;
+			width: 10px;
+			height: 10px;
+			background: #000;
+			position: absolute;
+			border: 1px solid #b7d4ab;
+			border-radius: 2px;
+		}
+
+		.box>.stage>.food {
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			left: 100px;
+			top: 100px;
+			transform: rotate(34deg);
+
+		}
+
+		.box>.stage>.food>div {
+			width: 50%;
+			height: 50%;
+			background: #000;
+			border-radius: 50%;
+			float: left;
+
+		}
+
+		.score-level {
+			width: 304px;
+			font: bold 20px "courier";
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="box">
+		<div class="stage">
+			<div class="snake">
+				<div class="title"></div>
+			</div>
+			<div class="food">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<div class="score-level">
+			<div class="score">
+				SCORE:<span id="score">0</span>
+			</div>
+			<div class="level">
+				LEVEL:<span id="level">1</span>
+			</div>
+		</div>
+	</div>
+	<script>
+		(function () {
+			let food = document.getElementsByClassName('food')[0]
+			let snake = document.getElementsByClassName('snake')[0]
+			let body = snake.getElementsByTagName('div')
+			let dir = null
+			let score = 0,
+				level = 1
+			let scoreSpan = document.getElementById('score')
+			let levelSpan = document.getElementById('level')
+
+			function makeFood() {
+				let top = Math.round(Math.random() * 29) * 10
+				let left = Math.round(Math.random() * 29) * 10
+				food.style.top = top + 'px'
+				food.style.left = left + 'px'
+			}
+			makeFood()
+			document.addEventListener('keydown', function (event) {
+				let keyArr = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Up', 'Down', 'Left', 'Right']
+				if (keyArr.indexOf(event.key) !== -1) {
+					dir = event.key
+				}
+			})
+			setTimeout(function main() {
+				let left = body[0].offsetLeft
+				let top = body[0].offsetTop
+				switch (dir) {
+					case 'ArrowUp':
+					case 'Up':
+						top -= 10
+
+						if (body[1] && top === body[1].offsetTop) {
+							top += 20;
+						}
+						break;
+					case 'ArrowDown':
+					case 'Down':
+						top += 10
+						if (body[1] && top === body[1].offsetTop) {
+							top -= 20;
+						}
+						break;
+					case 'ArrowLeft':
+					case 'Left':
+						left -= 10;
+						if (body[1] && left === body[1].offsetLeft) {
+							left += 20;
+						}
+						break;
+					case 'ArrowRight':
+					case 'Right':
+						left += 10;
+						if (body[1] && left === body[1].offsetLeft) {
+							left -= 20;
+						}
+						break;
+				}
+				if (left < 0 || left > 290 || top < 0 || top > 290) {
+					alert('游戏失败了')
+					return
+				}
+				if (left === food.offsetLeft && top === food.offsetTop) {
+					makeFood()
+					let newBody = document.createElement('div')
+					snake.insertAdjacentElement('afterbegin', newBody)
+					// snake.appendChild(newBody)
+					score++
+					scoreSpan.innerHTML = score
+					if (level < 10 && score / 5 == level) {
+						level++
+						levelSpan.innerHTML = level
+					}
+				}
+				for (let i = body.length - 1; i > 0; i--) {
+					let bodyLeft = body[i - 1].offsetLeft
+					let bodyTop = body[i - 1].offsetTop
+					if (bodyLeft === left && bodyTop === top) {
+						alert('你撞到自己了，游戏失败')
+						return
+					}
+
+					body[i].style.left = bodyLeft + 'px'
+					body[i].style.top = bodyTop + 'px'
+				}
+
+
+				body[0].style.left = left + 'px'
+				body[0].style.top = top + 'px'
+
+				setTimeout(main, 200 - (30 * (level - 1)))
+			}, 200)
+		})()
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		下一个紧挨着的兄弟元素选择器
+		h1+b{
+			border: 2px solid red;
+		}
+		
+		后面所有的兄弟元素选择器
+		.one~span{
+			border: 2px solid red;
+		}
+		h1~p{
+			border: 2px solid red;
+		}
+		h1~.two{
+			border: 2px solid red;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul>一级ul
+				<li>一级li
+					<ul>er级ul
+						<li>er级li</li>
+					</ul>
+				</li>
+				<li>一级li</li>
+			</ul>
+			<h1 class="one">标题1</h1>
+			<b class="bbb">加粗</b>
+			<span class="two">span1</span>
+			<p>段落1</p>
+			<i class="two">倾斜1</i>
+			<p class="two">段落2</p>
+		</div>
+	</body>
+</html>

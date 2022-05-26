@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box1 {
+				width: 100px;
+				height: 100px;
+				background-color: aqua;
+			}
+
+			#box2 {
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+			}
+
+			#box3 {
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+			}
+
+			.drag {
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1"> </div>
+		<div id="box2" class="drag"> </div>
+		<div id="box3" class="drag"> </div>
+		<img class="drag" src="../flex练习/产品商城 - 副本/img/O1CN012PySEu1wZWffJeMlo_!!0-item_pic.jpg_400x400q90.jpg_.webp" alt="">
+		<script>
+			(function() {
+				let dragEle = null
+				let left, top
+				document.addEventListener('mousedown', function(event) {
+					if (event.target.classList.contains('drag')) {
+						event.preventDefault()
+						dragEle = event.target
+						left = event.clientX - dragEle.offsetLeft
+						top = event.clientY - dragEle.offsetTop
+					}
+				})
+				document.addEventListener('mousemove', function() {
+					if (dragEle) {
+						dragEle.style.left = event.clientX - left + 'px'
+						dragEle.style.top = event.clientY - top + 'px'
+					}
+				})
+				document.addEventListener('mouseup', function(event) {
+					dragEle = null
+				})
+			})()
+		</script>
+	</body>
+</html>

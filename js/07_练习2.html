@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset=UTF-8>
+		<title>添加删除记录练习</title>
+		<style>
+			#total {
+				width: 450px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			ul {
+				list-style-type: none;
+			}
+
+			li {
+				border-style: solid;
+				border-width: 1px;
+				padding: 5px;
+				margin: 5px;
+				background-color: #99ff99;
+				float: left;
+			}
+
+			.inner {
+				width: 400px;
+				border-style: solid;
+				border-width: 1px;
+				margin: 10px;
+				padding: 10px;
+				float: left;
+			}
+
+			#employeeTable {
+				border-spacing: 1px;
+				background-color: black;
+				margin: 80px auto 10px auto;
+			}
+
+			th,
+			td {
+				background-color: white;
+			}
+
+			#formDiv {
+				width: 250px;
+				border-style: solid;
+				border-width: 1px;
+				margin: 50px auto 10px auto;
+				padding: 10px;
+			}
+
+			#formDiv input {
+				width: 100%;
+			}
+
+			.word {
+				width: 40px;
+			}
+
+			.inp {
+				width: 200px;
+			}
+		</style>
+
+		<script>
+			function delA() {
+				let tr = this.parentNode.parentNode
+				let name = tr.firstElementChild.innerHTML
+				if (confirm(`确认删除[${name}]吗？`)) {
+					tr.remove(tr)
+				}
+			}
+			window.onload = function() {
+				let links = document.getElementsByTagName('a')
+				links.href = 'javascript:;'
+				for (let i = 0; i < links.length; i++) {
+					links[i].onclick = delA
+				}
+				let addEmpButton = document.getElementById("addEmpButton")
+				addEmpButton.onclick = function() {
+					let name = document.getElementById('empName').value
+					let email = document.getElementById('email').value
+					let salary = document.getElementById('salary').value
+					// alert('namer+email+salary')
+					let tr = document.createElement('tr')
+
+					let nametd = document.createElement('td')
+					let emailtd = document.createElement('td')
+					let salarytd = document.createElement('td')
+					let atd = document.createElement('td')
+
+					let link = document.createElement('a')
+					link.href = 'javascript:;'
+					link.onclick = delA
+
+					let nameTxt = document.createTextNode(name)
+					let emailTxt = document.createTextNode(email)
+					let salaryTxt = document.createTextNode(salary)
+					let delTxt = document.createTextNode('delete')
+
+					nametd.appendChild(nameTxt)
+					emailtd.appendChild(emailTxt)
+					salarytd.appendChild(salaryTxt)
+					atd.appendChild(link)
+					link.appendChild(delTxt)
+					tr.appendChild(nametd)
+					tr.appendChild(emailtd)
+					tr.appendChild(salarytd)
+					tr.appendChild(atd)
+					let employeeTable = document.getElementById('employeeTable')
+					let tbody = employeeTable.getElementsByTagName('tbody')[0]
+					tbody.appendChild(tr)
+				}
+			}
+		</script>
+	</head>
+	<body>
+
+		<table id="employeeTable">
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Salary</th>
+				<th>&nbsp;</th>
+			</tr>
+			<tr>
+				<td>Tom</td>
+				<td>tom@tom.com</td>
+				<td>5000</td>
+				<td><a href="javascript:;">Delete</a></td>
+			</tr>
+			<tr>
+				<td>Jerry</td>
+				<td>jerry@sohu.com</td>
+				<td>8000</td>
+				<td><a href="javascript:;">Delete</a></td>
+			</tr>
+			<tr>
+				<td>Bob</td>
+				<td>bob@tom.com</td>
+				<td>10000</td>
+				<td><a href="javascript:;">Delete</a></td>
+			</tr>
+		</table>
+
+		<div id="formDiv">
+
+			<h4>添加新员工</h4>
+
+			<table>
+				<tr>
+					<td class="word">name: </td>
+					<td class="inp">
+						<input type="text" name="empName" id="empName" />
+					</td>
+				</tr>
+				<tr>
+					<td class="word">email: </td>
+					<td class="inp">
+						<input type="text" name="email" id="email" />
+					</td>
+				</tr>
+				<tr>
+					<td class="word">salary: </td>
+					<td class="inp">
+						<input type="text" name="salary" id="salary" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<button id="addEmpButton">
+							Submit
+						</button>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		/* 标准盒子模型：盒子在网页中的尺寸=content+padding+border，当盒子设置padding和border后盒子的尺寸会变大 
+		怪异盒子属性：盒子在网页中的尺寸=content+padding+border，当盒子设置padding和border后盒子的尺寸不会变大，会从content区域自动减去，保证和设置的宽高一样*/
+		.one{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			margin: 0 auto;
+			padding: 10px;
+			border: 10px solid blue;
+			box-sizing: content-box; /* 标准盒子属性 */
+		}	
+		.two{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			margin: 10px auto;
+			padding: 10px;
+			border: 10px solid blue;
+			box-sizing:border-box; /* 怪异盒子属性 */
+		}	
+		.three{
+			background-color: saddlebrown;
+			margin: 10px auto;
+		}
+		.phone{
+			width: 100px;
+			height: 500px;
+			background-color: darkmagenta;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="one"></div>
+		<div class="two"></div>
+		<div class="three"><div class="phone"></div></div>
+	</body>
+</html>

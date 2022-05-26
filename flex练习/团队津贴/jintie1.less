@@ -1,0 +1,224 @@
+.box {
+	width: 7.5rem;
+	height: 13.36rem;
+	background: #ffffff;
+	position: relative;
+	.head {
+		width: 7.5rem;
+		height: 1.31rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: fixed;
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+		background: #ffffff;
+		border: 1px solid #f5f5f5;
+		box-shadow: 0px 4px 14px 3px rgba(86, 231, 167, 0.1);
+		i {
+			width: 0.86rem;
+			font-size: 0.6rem;
+			font-family: PingFangSC;
+			font-weight: 400;
+			color: #333333;
+			line-height: 0.93rem;
+			padding-left: 0.26rem;
+			box-sizing: border-box;
+		}
+		& > span {
+			font-size: 0.34rem;
+			font-family: PingFangSC;
+			font-weight: 400;
+			color: #333333;
+			line-height: 0.52rem;
+		}
+		& > .empty {
+			width: 0.86rem;
+		}
+	}
+	.mat {
+		height: 1.31rem;
+	}
+	.body {
+		width: 7.5rem;
+		.item {
+			width: 7.43rem;
+			background: url(./imgs/圆角矩形%203%20拷贝%2020@2x.png) no-repeat center top/7.43rem 4.33rem;
+			padding: 0.62rem 0.5rem 0.62rem;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			.content {
+				width: 7.43rem;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				& > img {
+					width: 1.12rem;
+					height: 1.12rem;
+				}
+				.decription1 {
+					width: 3.2rem;
+					height: 1.12rem;
+					font-size: 30px;
+					font-family: SourceHanSansCN;
+					font-weight: 500;
+					color: #ffffff;
+					margin-left: 0.26rem;
+					margin-right: 0.55rem;
+					& > h2 {
+						font-size: 0.3rem;
+						font-family: SourceHanSansCN;
+						font-weight: 500;
+						color: #ffffff;
+					}
+					& > p {
+						margin-top: 0.25rem;
+					}
+				}
+				& > span {
+					width: 1.12rem;
+					height: 0.5rem;
+					border: 1px solid #ffffff;
+					background: linear-gradient(0deg, #56e7a7, #02bf6f);
+					border-radius: 0.25rem;
+					font-size: 24px;
+					font-family: SourceHanSansCN;
+					font-weight: 400;
+					color: #ffffff;
+					text-align: center;
+					line-height: 0.5rem;
+				}
+			}
+			.decription2 {
+				width: 7.43rem;
+				margin-top: 1rem;
+				display: flex;
+				justify-content: flex-start;
+				align-items: flex-start;
+				padding-right: 0.85rem;
+				box-sizing: border-box;
+				.cont {
+					width: 7.43rem;
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: flex-start;
+					h2 {
+						font-size: 0.32rem;
+						font-family: SourceHanSansCN;
+						font-weight: 400;
+						color: #ffffff;
+						line-height: 0.14rem;
+						opacity: 0.7;
+					}
+					p {
+						font-size: 0.38rem;
+						font-family: SourceHanSansCN;
+						font-weight: 500;
+						color: #ffffff;
+					}
+					& > .cont1 {
+						display: flex;
+						justify-content: flex-start;
+						align-items: center;
+					}
+					& > .cont2 {
+						display: flex;
+						justify-content: flex-start;
+						align-items: center;
+					}
+				}
+			}
+		}
+		.body1 {
+			.bottombar {
+				border: 1px solid #f5f5f5;
+				box-shadow: 0px 6px 14px 4px rgba(86, 231, 167, 0.1);
+				border-radius: 0.16rem;
+				margin: 0.15rem 0.26rem;
+				width: 7.04rem;
+				height: 6.8rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+				.title {
+					width: 7.04rem;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					text-align: center;
+					line-height: 0.99rem;
+					& > span:nth-of-type(1) {
+						width: 3.52rem;
+						height: 0.99rem;
+						background: linear-gradient(90deg, #02bf6f, #56e7a7);
+						font-size: 0.3rem;
+						font-family: SourceHanSansCN;
+						font-weight: 500;
+						color: #ffffff;
+					}
+					& > span:nth-of-type(2) {
+						width: 3.52rem;
+						height: 0.99rem;
+						background: #ffffff;
+						font-size: 0.3rem;
+						font-family: SourceHanSansCN;
+						font-weight: 500;
+						color: #02bf6f;
+					}
+				}
+				.text {
+					width: 7.04rem;
+					padding: 0 0.26rem;
+					box-sizing: border-box;
+					/* display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items:flex-start; */
+					& > .name {
+						display: flex;
+						justify-content: space-around;
+						align-items: center;
+						margin-top: 0.45rem;
+						margin-bottom: 0.45rem;
+						& > h1 {
+							font-size: 0.3rem;
+							font-family: SourceHanSansCN;
+							font-weight: 400;
+							color: #484848;
+						}
+					}
+					.detail {
+						display: flex;
+						justify-content: space-around;
+						align-items: center;
+						overflow: hidden;
+						p {
+							width: 25%;
+							height: 0.3rem;
+							line-height: 0.3rem;
+							text-align: center;
+							font-size: 0.26rem;
+							font-family: SourceHanSansCN;
+							font-weight: 400;
+							color: #484848;
+							&:nth-of-type(1) p {
+								padding-left: 0.45rem;
+								box-sizing: border-box;
+							}
+							&:nth-of-type(3) {
+								margin-top: 0.45rem;
+								margin-bottom: 0.45rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

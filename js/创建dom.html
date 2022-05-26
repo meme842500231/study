@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			window.onload = function() {
+				document.getElementById('btn01').onclick = function() {
+					let list = document.getElementById('list')
+					let li = document.createElement('li')
+					li.innerHTML = '猪八戒'
+					let bgj=document.getElementById('bgj')
+					// list.insertBefore(li,bgj)
+					list.replaceChild(li,bgj)
+					// list.appendChild(li)
+					// list.insertAdjacentElement("afterend", li)
+					// list.insertAdjacentHTML("beforebegin",'<li>我喜欢你</li>')
+				}
+				document.getElementById('btn02').onclick = function() {
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn01">按钮1</button>
+		<button id="btn02">按钮2</button>
+		<ul id="list">
+			<li>蜘蛛精</li>
+			<li id="bgj">白骨精</li>
+			<li>沙和尚</li>
+			<li>孙悟空</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.ppp {
+				width: 800px;
+				/* height: 500px; */
+				border: 2px solid palevioletred;
+				/* overflow: hidden; */
+				/* float: left; */
+			}
+
+			.one {
+				width: 100px;
+				height: 100px;
+				background: #00FFFF;
+				float: left;
+			}
+
+			.two {
+				width: 150px;
+				height: 150px;
+				background: red;
+				float: left;
+			}
+
+			.three {
+				width: 220px;
+				height: 220px;
+				background: blue;
+				float: left;
+			}
+
+			.four {
+				/* height: 100px; */
+				background: skyblue;
+				/* clear: both; */
+				
+			}
+
+			.ooo {
+
+				height: 600px;
+				background: plum;
+			}
+			.clearfix::after{
+				content: "";
+				display: block;
+				clear: both;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ppp clearfix">
+			<div class="one"></div>
+			<div class="two"></div>
+			<div class="three"></div>
+			<div class="four"></div>
+
+		</div>
+		<div class="ooo"></div>
+	</body>
+</html>

@@ -1,0 +1,109 @@
+.title {
+  color: red;
+}
+.mask {
+  width: 7.5rem;
+  height: 13.34rem;
+  background: lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+.mask .content {
+  width: 7rem;
+  height: 6.82rem;
+  background: #FFFFFF;
+  border: 1px solid #F5F5F5;
+  mask-shadow: 0px 6px 14px 4px rgba(132, 132, 132, 0.15);
+  border-radius: 0.16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.mask .content .head {
+  width: 7rem;
+  height: 1.02rem;
+  background: linear-gradient(0deg, #4FD7B4 0%, #56E7A7 99%);
+  border-top-left-radius: 0.16rem;
+  border-top-right-radius: 0.16rem;
+  font-size: 0.34rem;
+  font-family: SourceHanSansCN;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 1.02rem;
+  text-align: center;
+}
+.mask .content .body {
+  width: 7rem;
+  height: 4.13rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 0.3rem;
+  box-sizing: border-box;
+}
+.mask .content .body .description {
+  height: 1.05rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #EEEEEE;
+}
+.mask .content .body .description > h1 {
+  width: 25%;
+  font-size: 0.3rem;
+  font-family: SourceHanSansCN;
+  font-weight: 400;
+  color: #999999;
+}
+.mask .content .body .description > input {
+  width: 70%;
+  border: 1px transparent;
+  font-size: 0.3rem;
+  font-family: SourceHanSansCN;
+  font-weight: 400;
+  color: #484848;
+  outline: none;
+}
+.mask .content .footerbar {
+  width: 7rem;
+  height: 1.67rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.mask .content .footerbar > span {
+  width: 2.52rem;
+  height: 0.88rem;
+  border-radius: 0.44rem;
+}
+.mask .content .footerbar > span:nth-of-type(1) {
+  border: 2px solid #02BF6F;
+  border-radius: 0.44rem;
+  font-size: 0.34rem;
+  font-family: SourceHanSansCN;
+  font-weight: 400;
+  color: #02BF6F;
+  line-height: 0.88rem;
+  text-align: center;
+}
+.mask .content .footerbar > span:nth-of-type(2) {
+  background: linear-gradient(91deg, #56E7A7, #02BF6F);
+  border-radius: 0.44rem;
+  font-size: 0.34rem;
+  font-family: SourceHanSansCN;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 0.88rem;
+  text-align: center;
+}

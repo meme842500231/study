@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function fn(name, age, ) {
+				this.name = name
+				this.age = age
+
+			}
+			fn.prototype.toString = function() {
+				return 'fn{name:'+this.name+',age:'+this.age+'}';
+			}
+			fn.prototype.test = "公共属性"
+			let p1 = new fn('杨玉玲', 25)
+			let p2 = new fn('董正阳', 25)
+			let p3 = new fn('董宝宝', 1)
+			alert(p1);
+			alert(p2);
+			alert(p3);
+			// console.log(p1, p2, p3)
+			// // console.log('test'in p2)
+			// // console.log (p2.hasOwnProperty('test'));
+			// // console.log(p2.__proto__.hasOwnProperty('test'));
+			// console.log(p1 instanceof Object);
+			// function MyClass( ){
+
+			// }
+			// let mc=new MyClass();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

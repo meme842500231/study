@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			input[type="checkbox"] {
+				width: 500px;
+				height: 300px;
+				background-color: yellow;
+				color: red;
+				/* 清楚表单默认样式，快捷键  输入app英文  按tab 键 */
+				/* 带前缀的属性属于测试阶段的属性，每个内核的实现会有区别，或者根本没有实现 */
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+
+				/* 浏览器  内核           前缀
+			 chrome  webkit（blink）  -webkit- 
+			 safari  webkit           -webkit-
+			 opear   webkit          -o-
+			 firefox gecko           -moz- 
+			 ie      trident         -ms- 
+			 */
+			}
+
+			/* checkbox的伪类，选中状态 */
+			input[type="checkbox"]:checked {
+				background-color: #00FFFF;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="checkbox">
+	</body>
+</html>
